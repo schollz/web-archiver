@@ -13,6 +13,8 @@ def archiveSite(site):
         os.makedirs(folder)
     os.chdir(folder)
     os.system('wget --recursive --no-clobber --page-requisites --html-extension --convert-links --restrict-file-names=windows ' + site)
+    os.system('mv ' + site + '/* ./')
+    os.system('rm -rf ' + site)
     browser = webdriver.Firefox()
     browser.get('http://' + site)
     browser.save_screenshot('screenshot.png')
