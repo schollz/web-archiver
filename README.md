@@ -12,4 +12,5 @@ browser = webdriver.Firefox()
 browser.get('http://www.google.com/')
 browser.save_screenshot('screenie.png')
 browser.quit()
-```3. Generate site to be able to traverse the sites easily
+```
+3. Generate site to be able to traverse the sites easily
